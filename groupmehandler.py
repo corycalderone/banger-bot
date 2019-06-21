@@ -8,7 +8,7 @@ from urlextract import URLExtract
 
 extractor = URLExtract()
 
-def add_tracks_from_json(file):
+def add_tracks_from_json(file, group_id):
   with open(file) as json_file:
       data = json.load(json_file)
 

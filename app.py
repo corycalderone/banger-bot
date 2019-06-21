@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Hello, world! banger-bot is up and running!"
+    return render_template('home.html')
 
 @app.route('/msg', methods=['POST'])
 def webhook():

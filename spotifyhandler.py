@@ -7,10 +7,6 @@ import random
 username = 'coryc'
 scope = 'playlist-modify-public'
 
-reponses = [
-        "Already sent! Loser!"
-        ]
-
 def add_track(tracks, group_id):
     token = util.prompt_for_user_token(
         username, scope, config.SPOTIFY_CLIENT_ID, config.SPOTIFY_CLIENT_SECRET, redirect_uri='http://localhost/')
@@ -37,5 +33,5 @@ def add_track(tracks, group_id):
                     for post_id in log:
                         f.write(post_id + "\n")
             else:
-                groupmehandler.send_message("Already been sent, feel shame", group_id)
+                groupmehandler.send_message("Already been sent, ignoring!", group_id)
                 print("Duplicate detected in group "+group_id+", ignoring.")
